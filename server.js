@@ -92,7 +92,7 @@ app.delete('/api/notes/:id', (req, res) => {
   // had phinds help with the most efficient way to filter the notes
 
       const updatedNotes = parsedNotes.filter(note => note.id !== id);
-  // writes file with all but the selected note
+  // rewrites file with all but the selected note
       fs.writeFile('./db/db.json', JSON.stringify(updatedNotes), err => {
         if (err) {
           res.status(500).json(err);
