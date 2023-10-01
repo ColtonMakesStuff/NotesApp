@@ -73,8 +73,8 @@ let noteTitle;
    const newNote = {
      title: noteTitle.value,
      text: noteText.value,
-    //  title: noteTitle.value,
-    //  text: noteText.value,
+    //  title: 'im a title',
+    //  text: 'i am text',
    };
    saveNote(newNote).then(() => {
      getAndRenderNotes();
