@@ -4,7 +4,7 @@ This is a simple notetaker app that allows users to interact with a basic databa
 
 ## Deployed Link
 
-[Heroku link](https://your-app-name.herokuapp.com)
+[Heroku link](https://coltonmakesstuff-bc-notes-app-89468fe18b77.herokuapp.com/notes)
 
 ## Usage
 
