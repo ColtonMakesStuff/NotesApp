@@ -1,4 +1,4 @@
-et noteTitle;
+let noteTitle;
  let noteText;
  let saveNoteBtn;
  let newNoteBtn;
@@ -33,7 +33,9 @@ et noteTitle;
      },
    });
 
- const saveNote = (note) =>
+ const saveNote = (note) =>{
+ console.log(note)
+
    fetch('/api/notes', {
      method: 'POST',
      headers: {
@@ -41,7 +43,8 @@ et noteTitle;
      },
      body: JSON.stringify(note),
    });
-
+   
+}
  const deleteNote = (id) =>
    fetch(`/api/notes/${id}`, {
      method: 'DELETE',
@@ -70,6 +73,8 @@ et noteTitle;
    const newNote = {
      title: noteTitle.value,
      text: noteText.value,
+    //  title: noteTitle.value,
+    //  text: noteText.value,
    };
    saveNote(newNote).then(() => {
      getAndRenderNotes();
